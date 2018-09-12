@@ -1,10 +1,19 @@
 const router = require('express').Router()
-const mongoose = require('mongoose')
-const {Game} = require('../db').models
-console.log(mongoose.connection)
+const Game = require('../db/game')
+
+router.get('/', (req, res, next) => {
+    Game.find()
+    .then(data => {
+        res.send(data)
+    })
+    .catch(next)
+})
+
 router.get('/:id', (req, res, next) => {
-    Game.find({_id:req.params.id}).select('_id')
-    .then(data => res.send(data))
+    Game.findById(req.params.id)
+    .then(data => {
+        res.send(data)
+    })
     .catch(next)
 })
 

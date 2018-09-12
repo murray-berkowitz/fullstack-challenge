@@ -1,8 +1,9 @@
-const {Game} = require('./db').models
+const Game = require('./db/game')
 const axios = require('axios')
 
 let requests = ['https://2ncp9is1k8.execute-api.us-east-1.amazonaws.com/dev/feed/game/one', 'https://2ncp9is1k8.execute-api.us-east-1.amazonaws.com/dev/feed/game/two']
 .map(e => axios.get(e))
+
 
 let seed = () => {
     return axios.all(requests)

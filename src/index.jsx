@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Scores from './Scores'
 
 ReactDOM.render(
-    <h1>Hello, world</h1>,
+    <Scores />,
     document.getElementById('app')
 )

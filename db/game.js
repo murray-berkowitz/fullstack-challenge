@@ -5,148 +5,145 @@ const Schema = mongoose.Schema
 
 const gameSchema = new Schema({
 	deleted: {
-		type: 'Boolean'
+		type: Boolean
 	},
 	status: {
-		type: 'String'
+		type: String
 	},
 	awayTeamFinal: {
-		type: 'Number'
+		type: Number
 	},
 	awayTeamDetails: {
 		type: [
-			'Mixed'
+			Schema.Types.Mixed
 		]
 	},
 	homeTeamFinal: {
-		type: 'Number'
+		type: Number
 	},
 	homeTeamDetails: {
 		type: [
-			'Mixed'
+			Schema.Types.Mixed
 		]
 	},
 	isPeriodOver: {
-		type: 'String'
+		type: String
 	},
 	currentPeriod: {
-		type: 'Number'
+		type: Number
 	},
 	currentPeriodHalf: {
-		type: 'String'
+		type: String
 	},
 	oddsAvailable: {
-		type: 'Boolean'
+		type: Boolean
 	},
 	createdAt: {
-		type: 'Date'
+		type: Date
 	},
 	modifiedAt: {
-		type: 'Date'
+		type: Date
 	},
 	feedId: {
-		type: 'String'
+		type: String
 	},
 	awayTeam: {
 		deleted: {
-			type: 'Boolean'
+			type: Boolean
 		},
 		teamColor: {
-			type: 'String'
+			type: String
 		},
 		textColor: {
-			type: 'String'
+			type: String
 		},
 		createdAt: {
-			type: 'Date'
+			type: Date
 		},
 		modifiedAt: {
-			type: 'Date'
+			type: Date
 		},
 		feedId: {
-			type: 'String'
+			type: String
 		},
 		abbr: {
-			type: 'String'
+			type: String
 		},
 		league: {
-			type: 'String'
+			type: String
 		},
 		market: {
-			type: 'String'
+			type: String
 		},
 		name: {
-			type: 'String'
+			type: String
 		},
 		id: {
-			type: 'String'
+			type: String
 		}
 	},
 	dateTime: {
-		type: 'Number'
+		type: Number
 	},
 	homeTeam: {
 		deleted: {
-			type: 'Boolean'
+			type: Boolean
 		},
 		teamColor: {
-			type: 'String'
+			type: String
 		},
 		textColor: {
-			type: 'String'
+			type: String
 		},
 		createdAt: {
-			type: 'Date'
+			type: Date
 		},
 		modifiedAt: {
-			type: 'Date'
+			type: Date
 		},
 		feedId: {
-			type: 'String'
+			type: String
 		},
 		abbr: {
-			type: 'String'
+			type: String
 		},
 		league: {
-			type: 'String'
+			type: String
 		},
 		market: {
-			type: 'String'
+			type: String
 		},
 		name: {
-			type: 'String'
+			type: String
 		},
 		id: {
-			type: 'String'
+			type: String
 		}
 	},
 	league: {
 		deleted: {
-			type: 'Boolean'
+			type: Boolean
 		},
 		createdAt: {
-			type: 'Date'
+			type: Date
 		},
 		modifiedAt: {
-			type: 'Date'
+			type: Date
 		},
 		feedId: {
-			type: 'String'
+			type: String
 		},
 		alias: {
-			type: 'String'
+			type: String
 		},
 		name: {
-			type: 'String'
+			type: String
 		},
 		id: {
-			type: 'String'
+			type: String
 		}
-	},
-	id: {
-		type: 'String'
-    }
+	}
 })
 
 
-module.exports = gameSchema
+module.exports = mongoose.model('Game', gameSchema)
