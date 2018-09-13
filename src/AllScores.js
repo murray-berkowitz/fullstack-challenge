@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Scoreboard from './Scoreboard'
 import axios from 'axios'
 
-export default class Scores extends Component {
+export default class AllStores extends Component {
   constructor(){
     super()
     this.state = {
@@ -21,7 +21,7 @@ export default class Scores extends Component {
     const {games} = this.state
     return (
       games.map(game => 
-        <Scoreboard key={game.id} game={game} />
+        <Scoreboard key={game._id} game={game} />
       )
     )
   }

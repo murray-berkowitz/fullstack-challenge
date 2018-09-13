@@ -1,3 +1,4 @@
+//Configure webpack to bundle our React && ES6
 module.exports = {
     entry: './src/index',
     output: {

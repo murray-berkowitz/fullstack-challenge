@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Scores from './Scores'
+import AllScores from './AllScores'
 
 ReactDOM.render(
-    <Scores />,
+    <AllScores />,
     document.getElementById('app')
 )

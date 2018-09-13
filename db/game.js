@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-//generated from json to mongoose schema package (I know can be defined more specifically :D )
+//generated from json to mongoose schema npm module (I know can be defined more specifically. but less experienced with mongo)
 
 const gameSchema = new Schema({
 	deleted: {
@@ -145,5 +145,5 @@ const gameSchema = new Schema({
 	}
 })
 
-
+//export our model to be used in our api
 module.exports = mongoose.model('Game', gameSchema)

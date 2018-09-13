@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const Game = require('../db/game')
 
+
+//Find all games
 router.get('/', (req, res, next) => {
     Game.find()
     .then(data => {
@@ -9,6 +11,7 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
+//Find specifc game by id
 router.get('/:id', (req, res, next) => {
     Game.findById(req.params.id)
     .then(data => {
