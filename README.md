@@ -1,4 +1,4 @@
-#Run The App
+# Run The App
 1. npm install //will also run a postinstall script to build our bundle.js
 2. npm run start 
 3. That's it! Open up localhost:2020
